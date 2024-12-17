@@ -1,0 +1,9 @@
+name: Actions Demo
+run-name: Testing basic workflow actions
+on: [push]
+
+jobs:
+ basic_workflow:
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo "Job basic workflow"
