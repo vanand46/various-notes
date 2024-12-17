@@ -1,13 +1,14 @@
 name: Variables demo
-run-name:  Testing env variable
+run-name:  Testing env & repo variable
 
 on: [push]
 
 env:
   owner_name: Anand
+  repo_name: ${{ vars.REPO_NAME_VAR}}
 
 jobs:
   use_env_var:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job use_env_var is executing as part of new workflow - from $owner_name"
+      - run: echo "Job use_env_var is executing as part of new workflow - from $owner_name and repo name is $repo_name"
